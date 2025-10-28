@@ -1,4 +1,6 @@
 <script>
+import TaskTracker from './subcomponents/TaskTracker.vue';
+
     export default {
         data() {
             return {
@@ -14,7 +16,12 @@
                 this.deadline = ''
             },
             // TODO: Add a new method, to delete a task completed
-            
+            deleteTask(pos){
+                this.taskList.splice(pos,1)
+            }
+        },
+        components:{
+            TaskTracker
         }
     }
 
@@ -34,7 +41,11 @@
     <hr>
 
     <!-- TODO: Modify following code -->
-    <task-tracker ></task-tracker>
+    <task-tracker v-for="task,index in taskList"
+    :task="task"
+    :idx="index"
+    v-on:done="deleteTask(index)"
+    ></task-tracker>
 
 </template>
 
