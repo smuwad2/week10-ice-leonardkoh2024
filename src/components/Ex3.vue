@@ -40,6 +40,7 @@
                 }})
                 .then(response => {
                     console.log(response.data)
+                    this.posts = this.posts.filter(post => post.id !== id);
                 })
                 .catch(error => {
                     console.log(error.message)

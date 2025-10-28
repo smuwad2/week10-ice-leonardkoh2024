@@ -6,9 +6,9 @@
         data(){
             return {
                 moods:{
-                    "angry":"/public/assets/angry.png",
-                    "happy":"/public/assets/happy.png",
-                    "sad":"/public/assets/sad.png"
+                    "angry":"/assets/angry.png",
+                    "happy":"/assets/happy.png",
+                    "sad":"/assets/sad.png"
                 }
             }
         },
@@ -22,7 +22,6 @@
 
 
 <template>
-    <!-- TODO: add your template code here. Use boostrap card --> 
     <div class="card" style="width: 18rem;">
     <img class="card-img-top" :src=moods[mood.toLowerCase()] alt="Card image cap">
   <div class="card-body">

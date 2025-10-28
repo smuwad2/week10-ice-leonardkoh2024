@@ -6,9 +6,9 @@
         data(){
             return {
                 moods:{
-                    "angry":"/public/assets/angry.png",
-                    "happy":"/public/assets/happy.png",
-                    "sad":"/public/assets/sad.png"
+                    "angry":"/assets/angry.png",
+                    "happy":"/assets/happy.png",
+                    "sad":"/assets/sad.png"
                 }
             }
         },
